@@ -15,8 +15,8 @@
     />
     <title th:replace="${title}">레이아웃 타이틀</title>
   </head>
-  <body>
-    <div class="px-4 mx-auto md:px-10 xl:max-w-6xl">
+  <body class="mx-auto xl:max-w-6xl">
+    <div class="px-4 md:px-10">
       <!--  공통 Header  -->
       <div th:replace="~{fragments/header :: header}"></div>
 
@@ -27,7 +27,7 @@
     </div>
 
     <!--  공통 Footer  -->
-    <div th:replace="~{fragments/footer :: footer}" />
+    <div th:replace="~{fragments/footer :: baseFooter('px-4 md:px-10')}"></div>
 
     <!--  ionicons 적용  -->
     <script
