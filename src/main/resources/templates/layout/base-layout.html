@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+  th:fragment="baseParam (title, content)"
+  lang="ko"
+  xmlns:th="http://www.thymeleaf.org"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  tailwind CSS 적용  -->
+    <link
+      rel="stylesheet"
+      th:href="@{/css/output.css}"
+      href="../static/css/output.css"
+    />
+    <title th:replace="${title}">레이아웃 타이틀</title>
+  </head>
+  <body>
+    <div class="px-4 mx-auto md:px-10 xl:max-w-6xl">
+      <!--  공통 Header  -->
+      <div th:replace="~{fragments/header :: header}"></div>
+
+      <!--  메인 콘텐츠  -->
+      <div th:replace="${content}">
+        <p>레이아웃 콘텐츠</p>
+      </div>
+    </div>
+
+    <!--  공통 Footer  -->
+    <div th:replace="~{fragments/footer :: footer}" />
+
+    <!--  ionicons 적용  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

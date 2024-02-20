@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <footer th:fragment="baseFooter" id="main-footer" class="bg-gray-100 p-5">
+      <div class="mx-auto xl:max-w-7xl">
+        <h1 id="footer-logo" class="pb-9">
+          <a th:href="@{/}" href="#">
+            <img
+              th:src="@{/assets/logo.svg}"
+              src="/assets/logo.svg"
+              alt="Coward 로고"
+              class="inline-block h-6 md:h-8 xl:h-10"
+            />
+          </a>
+        </h1>
+
+        <div id="service-center" class="mb-8 flex items-center">
+          <a href="#" class="mr-1 text-lg font-bold xl:text-xl"> 고객센터 </a>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        <div
+          id="service-info"
+          class="mb-8 flex justify-between md:justify-start"
+        >
+          <div id="service-info-time" class="mr-14">
+            <div class="mb-2 font-bold">상담시간</div>
+            <div class="flex flex-col text-sm md:text-base">
+              <span>평일 11:00 ~ 17:00</span>
+              <span class="my-1">점심 12:30 ~ 13:30</span>
+              <span>(주말, 공휴일 제외)</span>
+            </div>
+          </div>
+
+          <div id="service-info-tel">
+            <div class="mb-2 font-bold">연락처</div>
+            <a class="footer-tel text-sm md:text-base" href="tel:02-1234-5678"
+              >02-1234-5678</a
+            >
+          </div>
+        </div>
+
+        <ul
+          id="text-link-list"
+          class="mb-4 flex items-center justify-center border-b pb-4 text-sm md:justify-start md:text-base"
+        >
+          <li>
+            <a href="#">이용가이드</a>
+          </li>
+          <li>
+            <a href="#" class="mx-3">개인정보처리방침</a>
+          </li>
+          <li><a href="#">이용약관</a></li>
+        </ul>
+
+        <div class="flex-row-reverse justify-between md:flex">
+          <div id="icon-links" class="mb-3 flex items-center justify-center">
+            <a href="https://github.com/Brogod97/Coward-V2" target="_blank">
+              <img src="/assets/github.svg" alt="Github 바로가기" class="h-7" />
+            </a>
+            <a href="#" class="mx-5">
+              <img src="/assets/notion.svg" alt="Notion 바로가기" class="h-7" />
+            </a>
+            <a href="#"
+              ><img src="assets/figma.svg" alt="Figma 바로가기" class="h-7"
+            /></a>
+          </div>
+          <div id="copyright" class="flex items-center justify-center">
+            <p class="text-sm">Copyright © 2024 brogod All Right Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
