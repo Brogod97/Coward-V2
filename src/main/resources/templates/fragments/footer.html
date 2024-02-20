@@ -5,8 +5,8 @@
     <title>Title</title>
   </head>
   <body>
-    <footer th:fragment="baseFooter(grid)" id="main-footer" th:classappend="${grid}" class="bg-gray-100 p-5">
-      <div class="mx-auto xl:max-w-7xl">
+    <footer th:fragment="baseFooter(grid)" id="main-footer"  class="bg-gray-100 p-5">
+      <div th:classappend="${grid}" >
         <h1 id="footer-logo" class="pb-9">
           <a th:href="@{/}" href="#">
             <img
