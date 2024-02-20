@@ -15,10 +15,13 @@
     />
     <title th:replace="${title}">레이아웃 타이틀</title>
   </head>
-  <body class="mx-auto xl:max-w-6xl">
-    <div class="px-4 md:px-10">
+  <body th:with="grid='px-4 md:px-10 mx-auto xl:max-w-6xl'">
+    <div th:classappend="${grid}" class="px-4 md:px-10 mx-auto xl:max-w-6xl">
       <!--  공통 Header  -->
       <div th:replace="~{fragments/header :: header}"></div>
+
+      <!--   Global Navigation   -->
+      <div th:replace="~{fragments/gnb :: nav}"></div>
 
       <!--  메인 콘텐츠  -->
       <div th:replace="${content}">
@@ -27,7 +30,7 @@
     </div>
 
     <!--  공통 Footer  -->
-    <div th:replace="~{fragments/footer :: baseFooter('px-4 md:px-10')}"></div>
+    <div th:replace="~{fragments/footer :: baseFooter(${grid})}"></div>
 
     <!--  ionicons 적용  -->
     <script

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+
+
+<body>
+<nav id="gnb" class="flex h-10 items-center justify-between">
+    <ul id="gnb-list" class="flex flex-grow items-center">
+        <!-- TODO: 백엔드 -> currentPage -> th:if -->
+        <li class="mr-3 font-extrabold text-blue-500 xl:mr-5">
+            <a href="#">공모전</a>
+        </li>
+        <li class="mr-3 xl:mr-5">
+            <a href="#">개발자 찾기</a>
+        </li>
+        <li class="mr-3 xl:mr-5">
+            <a href="#">가격 안내</a>
+        </li>
+    </ul>
+
+    <form
+            id="gnb-search"
+            class="relative hidden flex-grow md:block"
+            action="#"
+    >
+        <input
+                type="text"
+                placeholder="어떤 공모전을 찾으시나요?"
+                class="w-full rounded-md border py-1.5 pl-4 pr-7 text-sm"
+        />
+        <div class="absolute right-3 top-1.5 cursor-pointer text-gray-500">
+            <ion-icon name="search-outline"></ion-icon>
+        </div>
+    </form>
+</nav>
+</body>
+</html>
